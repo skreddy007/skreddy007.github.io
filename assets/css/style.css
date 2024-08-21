@@ -526,7 +526,7 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
 }
 
 .profiles-content {padding-top: 100px;}
-.profiles-content .col-sm-3{padding:0;}
+.profiles-content .col-sm-2{padding:0;}
 .profile-txt {
     display: flex;
     align-items: center;
@@ -555,7 +555,7 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
 .profile-border {
     border-bottom: 1px solid #b2c1ce;
 }
-.single-profile-overlay{
+/* .single-profile-overlay{
     display:flex;
     align-items:center;
     text-transform: capitalize;
@@ -589,9 +589,9 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
     -o-transform:scale(1);
     transform:scale(1);
     top:0;
-}
-.single-profile:hover .profile-icon-name,.single-profile:hover .profile-txt a>i{color: #fff;}
-.single-profile:hover .profile-border {border:transparent;}
+} */
+/* .single-profile:hover .profile-icon-name,.single-profile:hover .profile-txt a>i{color: #fff;}
+.single-profile:hover .profile-border {border:transparent;} */
 /*-------------------------------------
         9. Portfolio
 --------------------------------------*/
