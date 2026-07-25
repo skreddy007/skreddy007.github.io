@@ -371,7 +371,9 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
         6.  Skills
 --------------------------------------*/
 .skills {
-    
+    padding: 50px 0 100px;
+    border-top: 1px solid #e5ebf2;
+    background: #f9fbfd;
 }
 .skill-content{padding: 50px 0 80px;}
 .single-skill-content{padding-top: 100px;}
@@ -693,7 +695,7 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
     background: #f9fbfd;
     padding: 50px 0 100px;
 }
-.single-contact-box {padding-top: 100px;}
+.single-contact-box {padding-top: 50px;}
 .contact-form  .form-group {
     margin-bottom: 20px;
     
@@ -769,6 +771,7 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
 .contact-add-info { margin: 42px 0 52px;}
 .single-contact-add-info {
     margin-bottom: 26px;
+    text-align: center;
 }
 .single-contact-add-info h3 {
     color:  #636a82;
@@ -866,13 +869,19 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
     padding: 50px 0 100px;
     border-top: 1px solid #e5ebf2;
 }
-.certifications-content {padding-top: 100px;}
+.certifications-content {padding-top: 50px;}
+.certifications-content .row > [class*="col-"] {
+    display: flex;
+}
 .cert-card {
     background: #fff;
     border: 1px solid #e5ebf2;
     padding: 30px 24px;
     margin-bottom: 30px;
     min-height: 220px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
     -webkit-transition: .3s;
     transition: .3s;
 }
@@ -898,6 +907,7 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
     font-size: 13px;
     text-transform: uppercase;
     font-weight: 500;
+    margin-top: auto;
 }
 .cert-achievement {
     text-align: center;
@@ -905,7 +915,7 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
     font-size: 15px;
     color: #636a82;
 }
-.skill-tags-content {padding-top: 100px;}
+.skill-tags-content {padding-top: 50px;}
 .skill-group {margin-bottom: 28px;}
 .skill-group h4 {
     font-size: 14px;
