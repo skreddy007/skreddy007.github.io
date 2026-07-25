@@ -59,6 +59,10 @@
 
 	.single-horizontal-timeline {max-width: 350px;margin: 30px auto;}
 
+	.cert-card {min-height: auto;}
+
+	.skill-tag-list {gap: 8px;}
+
 }/*max-width:767px*/
 
 @media screen and (max-width: 660px){
