@@ -767,6 +767,9 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
 
 /*.contact-add-info */
 .contact-add-info { margin: 42px 0 52px;}
+.single-contact-add-info {
+    margin-bottom: 26px;
+}
 .single-contact-add-info h3 {
     color:  #636a82;
     font-weight:  500;
@@ -927,7 +930,8 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
     text-transform: capitalize;
 }
 .project-item-wrap {margin-bottom: 30px;}
-.project-caption {padding: 14px 0 0;}
+.project-item-wrap .item {margin-bottom: 0;}
+.project-caption {padding: 8px 0 0;}
 .project-caption h4 {
     font-size: 15px;
     font-weight: 600;
