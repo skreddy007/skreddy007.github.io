@@ -49,25 +49,33 @@
 }/*max-width:768px*/
 
 @media screen and (max-width:767px){
+	:root {
+		--space-section: 48px;
+		--space-section-inner: 24px;
+	}
+
 	.single-about-img {max-width: 450px;}
+	.single-about-txt {padding: var(--space-3);}
 	.experience-time span>i,.timeline-content span>i,.main-timeline:before {display: none;}
 	.experience-time, .timeline-content {margin-left: 0;}
 
 	.header-text h2 {font-size: 32px;}
 	.header-text p {font-size: 16px;}
-	.header-text .hero-subtitle {font-size: 14px; margin-bottom: 32px;}
+	.header-text .hero-subtitle {font-size: 14px; margin-bottom: var(--space-4);}
 
-	.project-item-wrap {max-width: 350px;margin: 0 auto 30px;}
+	.project-item-wrap {max-width: 350px;margin: 0 auto var(--space-4);}
 	.project-item-wrap .item {max-width: none;margin: 0;}
 
-	.single-profile {max-width: 350px; margin: 30px auto;border: 0;}
+	.single-profile {max-width: 350px; margin: var(--space-4) auto;border: 0;}
 	.profile-border{border: 0;}
 
-	.single-horizontal-timeline {max-width: 350px;margin: 30px auto;}
+	.single-horizontal-timeline {max-width: 350px;margin: 0 auto var(--space-4);}
 
 	.cert-card {min-height: auto;}
 
-	.skill-tag-list {gap: 8px;}
+	.skill-tag-list {gap: var(--space-1);}
+
+	.single-contact-box {padding: var(--space-4) var(--space-3);}
 
 	.contact-cta {flex-direction: column;}
 	.btn-contact {width: 220px;}
