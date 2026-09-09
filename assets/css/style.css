@@ -47,6 +47,7 @@ font-family: 'Poppins', sans-serif;
 	--border-strong: #d5d9e3;
 	--border-accent: #d6e4f0;
 	--line: #b2c1ce;
+	--hero-bg: #0563bb;
 	--hero-overlay: rgba(31, 44, 108, 0.65);
 	--hero-muted: rgba(255, 255, 255, 0.9);
 	--hero-cta-bg: #ffffff;
@@ -92,7 +93,8 @@ font-family: 'Poppins', sans-serif;
 	--border-strong: #3a4558;
 	--border-accent: #2a4564;
 	--line: #3d4a5c;
-	--hero-overlay: rgba(10, 14, 24, 0.72);
+	--hero-bg: #0563bb;
+	--hero-overlay: rgba(12, 22, 48, 0.55);
 	--hero-muted: rgba(255, 255, 255, 0.88);
 	--hero-cta-bg: #f4f7fb;
 	--hero-cta-fg: #0563bb;
@@ -123,7 +125,8 @@ font-family: 'Poppins', sans-serif;
 		--border-strong: #3a4558;
 		--border-accent: #2a4564;
 		--line: #3d4a5c;
-		--hero-overlay: rgba(10, 14, 24, 0.72);
+		--hero-bg: #0563bb;
+		--hero-overlay: rgba(12, 22, 48, 0.55);
 		--hero-muted: rgba(255, 255, 255, 0.88);
 		--hero-cta-bg: #f4f7fb;
 		--hero-cta-fg: #0563bb;
@@ -370,8 +373,9 @@ nav.navbar.bootsnav ul.nav > li.theme-toggle-item {
     nav.navbar.bootsnav ul.nav > li > a {
         color: var(--muted-soft);
     }
-    nav.navbar.bootsnav ul.nav > li.theme-toggle-item {
-        padding: 10px 0 4px;
+    /* Header toggle stays visible; hide the in-menu duplicate below the fold */
+    .theme-toggle-item {
+        display: none;
     }
 }
 
@@ -390,7 +394,7 @@ nav.navbar.bootsnav ul.nav > li.theme-toggle-item {
     justify-content: center;
     position:relative;
     /* background:url(../images/about/welcome-banner.jpg)no-repeat; */
-    background-color: var(--accent);
+    background-color: var(--hero-bg);
     background-size:cover;
     background-position: center;
     height:890px;
