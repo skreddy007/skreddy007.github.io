@@ -49,9 +49,16 @@
 }/*max-width:768px*/
 
 @media screen and (max-width:767px){
-	:root {
+	:root,
+	[data-theme="light"],
+	[data-theme="dark"] {
 		--space-section: 48px;
 		--space-section-inner: 24px;
+	}
+
+	.theme-toggle--bar {
+		margin-top: 18px;
+		margin-right: 8px;
 	}
 
 	.single-about-img {max-width: 450px;}
