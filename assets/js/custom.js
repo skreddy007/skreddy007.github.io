@@ -1,3 +1,77 @@
+/* Theme toggle — persist in localStorage, follow OS when unset */
+(function () {
+	var STORAGE_KEY = "theme";
+	var root = document.documentElement;
+
+	function getPreferredTheme() {
+		try {
+			var stored = localStorage.getItem(STORAGE_KEY);
+			if (stored === "light" || stored === "dark") {
+				return stored;
+			}
+		} catch (err) {}
+		return window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches
+			? "dark"
+			: "light";
+	}
+
+	function syncToggles(theme) {
+		var isDark = theme === "dark";
+		var buttons = document.querySelectorAll(".theme-toggle");
+		for (var i = 0; i < buttons.length; i++) {
+			buttons[i].setAttribute("aria-pressed", isDark ? "true" : "false");
+			buttons[i].setAttribute("aria-label", isDark ? "Switch to light theme" : "Switch to dark theme");
+		}
+	}
+
+	function applyTheme(theme, persist) {
+		root.setAttribute("data-theme", theme);
+		if (persist) {
+			try {
+				localStorage.setItem(STORAGE_KEY, theme);
+			} catch (err) {}
+		}
+		syncToggles(theme);
+	}
+
+	function toggleTheme() {
+		var next = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
+		applyTheme(next, true);
+	}
+
+	applyTheme(getPreferredTheme(), false);
+
+	function bindToggles() {
+		var buttons = document.querySelectorAll(".theme-toggle");
+		for (var i = 0; i < buttons.length; i++) {
+			buttons[i].addEventListener("click", toggleTheme);
+		}
+	}
+
+	if (document.readyState === "loading") {
+		document.addEventListener("DOMContentLoaded", bindToggles);
+	} else {
+		bindToggles();
+	}
+
+	if (window.matchMedia) {
+		var media = window.matchMedia("(prefers-color-scheme: dark)");
+		var onChange = function (event) {
+			try {
+				if (localStorage.getItem(STORAGE_KEY)) {
+					return;
+				}
+			} catch (err) {}
+			applyTheme(event.matches ? "dark" : "light", false);
+		};
+		if (media.addEventListener) {
+			media.addEventListener("change", onChange);
+		} else if (media.addListener) {
+			media.addListener(onChange);
+		}
+	}
+})();
+
 $(document).ready(function(){
 	"use strict";
     
