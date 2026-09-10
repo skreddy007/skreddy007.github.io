@@ -1017,6 +1017,13 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
     text-transform: none;
     margin: 0 0 var(--space-3);
 }
+.project-secondary-grid {
+    display: flex;
+    flex-wrap: wrap;
+}
+.project-secondary-grid > [class*="col-"] {
+    display: flex;
+}
 .project-media {
     position: relative;
     aspect-ratio: 16 / 9;
@@ -1370,7 +1377,8 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
 .project-item-wrap {
     display: flex;
     flex-direction: column;
-    height: 100%;
+    width: 100%;
+    flex: 1 1 auto;
     margin-bottom: var(--space-4);
     background: var(--surface);
     border: 1px solid var(--border);
