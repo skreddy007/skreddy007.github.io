@@ -1,0 +1,26 @@
+{
+  "order": 6,
+  "placement": "secondary",
+  "title": "MangaLib",
+  "story": "Library pages for organizing and browsing a manga collection. Public repo is HTML and CSS.",
+  "stack": [
+    "HTML",
+    "CSS",
+    "Web"
+  ],
+  "links": [
+    {
+      "label": "GitHub",
+      "href": "https://github.com/skreddy007/MangaLib",
+      "style": "ghost",
+      "rel": "noopener noreferrer"
+    }
+  ],
+  "image": {
+    "src": "/assets/images/portfolio/MangaLib.jpg",
+    "alt": "MangaLib collection screens",
+    "webp": "/assets/images/portfolio/MangaLib.webp",
+    "width": 1200,
+    "height": 813
+  }
+}

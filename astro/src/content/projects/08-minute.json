@@ -1,0 +1,23 @@
+{
+  "order": 8,
+  "placement": "secondary",
+  "title": "Minute",
+  "story": "MERN learning project for sharing short posts, with search, pagination, and per-post URLs. README marks it as in progress.",
+  "stack": [
+    "React",
+    "Node.js",
+    "MongoDB"
+  ],
+  "links": [
+    {
+      "label": "GitHub",
+      "href": "https://github.com/skreddy007/minute",
+      "style": "ghost",
+      "rel": "noopener noreferrer"
+    }
+  ],
+  "image": {
+    "src": "/assets/images/portfolio/Minute.png",
+    "alt": "Minute posts app"
+  }
+}

@@ -1,0 +1,79 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import Icons from './Icons.astro';
+
+interface Props {
+	site: CollectionEntry<'site'>['data'];
+}
+
+const { site } = Astro.props;
+const { about, sections, social } = site;
+---
+
+<section id="about" class="about">
+	<div class="section-heading text-center">
+		<h2>{sections.about}</h2>
+	</div>
+	<div class="container">
+		<div class="about-content">
+			<div class="row">
+				<div class="col-sm-6">
+					<div class="single-about-txt">
+						<h3>{about.title}</h3>
+						<p>
+							{
+								about.paragraphs.map((paragraph, index) => (
+									<>
+										{index > 0 && (
+											<>
+												<br />
+												<br />
+											</>
+										)}
+										{paragraph}
+									</>
+								))
+							}
+						</p>
+						<div class="row">
+							<div class="col-sm-8">
+								<div class="single-about-add-info">
+									<h3>{about.emailLabel}</h3>
+									<p><a href={`mailto:${about.email}`}>{about.email}</a></p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-offset-1 col-sm-5">
+					<div class="single-about-img">
+						<div class="about-photo-frame">
+							<picture>
+								<source srcset={about.photo.webp} type="image/webp" />
+								<img
+									src={about.photo.jpg}
+									width={about.photo.width}
+									height={about.photo.height}
+									alt={about.photo.alt}
+								/>
+							</picture>
+						</div>
+						<ul class="about-list-icon">
+							{
+								social.map((item) => (
+									<li>
+										<a href={item.href} target="_blank" rel="noopener noreferrer" aria-label={item.label}>
+											<i aria-hidden="true">
+												<Icons name={item.icon} />
+											</i>
+										</a>
+									</li>
+								))
+							}
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

@@ -1,0 +1,12 @@
+{
+  "order": 2,
+  "column": 1,
+  "title": "Languages",
+  "tags": [
+    "Python",
+    "Java",
+    "SQL",
+    "JavaScript",
+    "C++"
+  ]
+}

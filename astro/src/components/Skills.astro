@@ -1,0 +1,39 @@
+---
+import type { CollectionEntry } from 'astro:content';
+
+interface Props {
+	heading: string;
+	groups: CollectionEntry<'skills'>[];
+}
+
+const { heading, groups } = Astro.props;
+const columns = [1, 2].map((column) => groups.filter((group) => group.data.column === column));
+---
+
+<section id="skills" class="skills">
+	<div class="section-heading text-center">
+		<h2>{heading}</h2>
+	</div>
+	<div class="container">
+		<div class="skill-tags-content">
+			<div class="row">
+				{
+					columns.map((column) => (
+						<div class="col-md-6">
+							{column.map((group) => (
+								<div class="skill-group">
+									<h4>{group.data.title}</h4>
+									<div class="skill-tag-list">
+										{group.data.tags.map((tag) => (
+											<span class="skill-tag">{tag}</span>
+										))}
+									</div>
+								</div>
+							))}
+						</div>
+					))
+				}
+			</div>
+		</div>
+	</div>
+</section>

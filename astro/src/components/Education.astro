@@ -1,0 +1,57 @@
+---
+import type { CollectionEntry } from 'astro:content';
+
+interface Props {
+	heading: string;
+	items: CollectionEntry<'education'>[];
+}
+
+const { heading, items } = Astro.props;
+---
+
+<section id="education" class="education">
+	<div class="section-heading text-center">
+		<h2>{heading}</h2>
+	</div>
+	<div class="container">
+		<div class="education-horizontal-timeline">
+			<div class="row">
+				{
+					items.map((item) => (
+						<div class="col-sm-6">
+							<div class="single-horizontal-timeline">
+								<div class="experience-time">
+									<h2>{item.data.dates}</h2>
+									<h3>{item.data.degree}</h3>
+								</div>
+								<div class="timeline-horizontal-border">
+									<i aria-hidden="true" />
+									<span
+										class:list={[
+											'single-timeline-horizontal',
+											item.data.shortRule && 'spacial-horizontal-line',
+										]}
+									/>
+								</div>
+								<div class="timeline">
+									<div class="timeline-content">
+										<h4 class="title">{item.data.school}</h4>
+										<h5>{item.data.location}</h5>
+										<p class="description">
+											{item.data.details.map((line, index) => (
+												<>
+													{index > 0 && <br />}
+													{line}
+												</>
+											))}
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					))
+				}
+			</div>
+		</div>
+	</div>
+</section>

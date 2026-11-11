@@ -1,0 +1,122 @@
+{
+  "title": "Saikiran Reddy Ramacharla — Security-focused Engineer",
+  "description": "Saikiran Reddy Ramacharla — security-focused engineer in vulnerability management, incident response, and IAM. Jr. Full Stack Developer (contract) with a Nutanix client.",
+  "canonical": "https://skreddy007.github.io/",
+  "brand": "Saikiran",
+  "nav": [
+    {
+      "href": "#about",
+      "label": "about"
+    },
+    {
+      "href": "#experience",
+      "label": "experience"
+    },
+    {
+      "href": "#certifications",
+      "label": "certifications"
+    },
+    {
+      "href": "#skills",
+      "label": "skills"
+    },
+    {
+      "href": "#projects",
+      "label": "projects"
+    },
+    {
+      "href": "#education",
+      "label": "education"
+    },
+    {
+      "href": "#contact",
+      "label": "contact"
+    }
+  ],
+  "resume": {
+    "label": "View resume",
+    "href": "https://drive.google.com/file/d/1FNg8IMOJc8ADlLwjLyV95Gx9WK7BS4r2/view?usp=sharing"
+  },
+  "social": [
+    {
+      "href": "https://www.linkedin.com/in/kiran098/",
+      "label": "Saikiran on LinkedIn",
+      "icon": "linkedin"
+    },
+    {
+      "href": "https://github.com/skreddy007",
+      "label": "Saikiran on GitHub",
+      "icon": "github"
+    }
+  ],
+  "meta": {
+    "ogType": "website",
+    "ogTitle": "Saikiran Reddy Ramacharla — Security-focused Engineer",
+    "ogDescription": "Security-focused engineer in vulnerability management, incident response, and IAM. Jr. Full Stack Developer (contract) with a Nutanix client.",
+    "ogUrl": "https://skreddy007.github.io/",
+    "ogImage": "https://skreddy007.github.io/assets/images/about/og-image.jpg",
+    "ogImageType": "image/jpeg",
+    "ogImageWidth": "1200",
+    "ogImageHeight": "630",
+    "ogImageAlt": "Portrait of Saikiran Reddy Ramacharla",
+    "twitterCard": "summary_large_image",
+    "twitterTitle": "Saikiran Reddy Ramacharla — Security-focused Engineer",
+    "twitterDescription": "Security-focused engineer in vulnerability management, incident response, and IAM. Jr. Full Stack Developer (contract) with a Nutanix client.",
+    "twitterImage": "https://skreddy007.github.io/assets/images/about/og-image.jpg"
+  },
+  "hero": {
+    "lines": [
+      {
+        "text": "Hi, I am"
+      },
+      {
+        "text": "Saikiran Reddy"
+      },
+      {
+        "text": "Ramacharla",
+        "accent": "."
+      }
+    ],
+    "tagline": "Security-focused engineer · Vulnerability management",
+    "subtitle": "Incident response · IAM · Jr. Full Stack Developer"
+  },
+  "sections": {
+    "about": "About me",
+    "experience": "Experience",
+    "certifications": "Certifications",
+    "skills": "Skills",
+    "projects": "Selected work",
+    "moreProjects": "More projects",
+    "education": "Education",
+    "contact": "Contact me"
+  },
+  "about": {
+    "title": "Security-focused engineer · Jr. Full Stack Developer",
+    "paragraphs": [
+      "Security-focused engineer with over 3 years of professional experience in vulnerability management, security incident response, and secure identity management, along with full-stack development and backend automation. I am a Jr. Full Stack Developer on contract with Amiseq (client: Nutanix). I build Python data pipelines for the Wiz platform, track vulnerability trends and emergency patch status for zero-day vulnerabilities, and support SAST, SCA, and CSPM assessments with Harbor, Wiz, Tenable, and Black Duck.",
+      "I hold ISC2 Certified in Cybersecurity (CC), Okta Professional, and the SailPoint Identity Security Leader credential. I also completed the Microsoft Entra ID course on LinkedIn Learning.",
+      "Apart from code, I'm a GearHead."
+    ],
+    "emailLabel": "email",
+    "email": "skr.ramacharla@gmail.com",
+    "photo": {
+      "jpg": "/assets/images/about/my-pic.jpg",
+      "webp": "/assets/images/about/my-pic.webp",
+      "alt": "Portrait of Saikiran Reddy Ramacharla",
+      "width": 1200,
+      "height": 1800
+    }
+  },
+  "certificationsNote": "4 Applause Awards for engineering performance and prompt bug resolutions during tenure at Deloitte",
+  "contact": {
+    "name": "Saikiran Reddy Ramacharla",
+    "tagline": "Security-focused engineer · Vulnerability management & IAM",
+    "emailLabel": "Email",
+    "email": "skr.ramacharla@gmail.com",
+    "locationLabel": "Location",
+    "location": "Blacksburg, VA",
+    "emailCta": "Email me",
+    "linkedinCta": "LinkedIn"
+  },
+  "footer": "© 2026 Saikiran Reddy Ramacharla"
+}

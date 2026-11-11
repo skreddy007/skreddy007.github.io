@@ -1,0 +1,14 @@
+{
+  "order": 3,
+  "dates": "August 2023 - March 2025",
+  "role": "Research Assistant",
+  "company": "Virginia Tech",
+  "meta": "Blacksburg, VA",
+  "bullets": [
+    "Developed front-end and back-end features for the GlycoData platform using HTML5, CSS, Python, JavaScript, Flask, and Django, resulting in faster database execution and lower UI latency.",
+    "Migrated and hosted application environments on AWS, implementing S3 for file management and rewriting background workflows to run efficiently on AWS Lambda.",
+    "Configured Dockerized application environments using Python and Java containers to establish repeatable developer environments and reduce localized deployment bugs by 20%.",
+    "Troubleshot complex runtime application bugs on the production server, using AWS CloudWatch and Pytest to isolate issues and decrease platform downtime by 15%.",
+    "Implemented secure coding and operational practices, applying fine-grained AWS IAM roles and authorization policies to protect user and system data assets."
+  ]
+}

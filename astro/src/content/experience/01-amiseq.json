@@ -1,0 +1,15 @@
+{
+  "order": 1,
+  "dates": "January 2026 - Present",
+  "role": "Jr. Full Stack Developer",
+  "company": "Amiseq",
+  "meta": "Client: Nutanix · Contract/Remote",
+  "bullets": [
+    "Developed and maintained backend data pipelines in Python to interface with the Wiz security platform via GraphQL APIs, replacing extensive manual data compilation processes.",
+    "Programmed a backend risk-based remediation engine in Python that parses vulnerability data payloads, automatically cross-referencing CVSS scores, exploitability metrics, and business impact to prioritize high-risk assets.",
+    "Designed and implemented an automated data analytics pipeline to track vulnerability trends over time, providing leadership with enhanced visibility into system patching metrics across product lines.",
+    "Built an internal Python dashboard that unifies data from multiple vulnerability scanners into a single view of each product's vulnerability posture and SLA metrics.",
+    "Assisted application development teams during security incident windows by analyzing codebase exposure, validating software fixes, and tracking emergency patch status for zero-day vulnerabilities.",
+    "Led bi-weekly/monthly technical synchronization meetings with product development teams to review security backlogs, resolve code-level blockers, and ensure rapid adherence to remediation SLAs."
+  ]
+}

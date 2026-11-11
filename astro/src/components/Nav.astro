@@ -1,0 +1,64 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import Icons from './Icons.astro';
+
+interface Props {
+	site: CollectionEntry<'site'>['data'];
+}
+
+const { site } = Astro.props;
+---
+
+<header class="top-area">
+	<div class="header-area">
+		<nav class="navbar navbar-default bootsnav navbar-fixed dark no-background" aria-label="Primary">
+			<div class="container">
+				<div class="navbar-header">
+					<button
+						type="button"
+						class="navbar-toggle"
+						aria-label="Open menu"
+						aria-expanded="false"
+						aria-controls="navbar-menu"
+					>
+						<i class="icon-bars" aria-hidden="true"><Icons name="bars" /></i>
+						<i class="icon-close" aria-hidden="true"><Icons name="close" /></i>
+					</button>
+					<button
+						type="button"
+						class="theme-toggle theme-toggle--bar"
+						aria-label="Switch to dark theme"
+						aria-pressed="false"
+					>
+						<Icons name="moon" class="theme-icon theme-icon-moon" />
+						<Icons name="sun" class="theme-icon theme-icon-sun" />
+					</button>
+					<a class="navbar-brand" href="/">{site.brand}</a>
+				</div>
+				<div class="collapse navbar-collapse menu-ui-design" id="navbar-menu">
+					<ul class="nav navbar-nav navbar-right">
+						{
+							site.nav.map((item) => (
+								<li class="smooth-menu">
+									<a href={item.href}>{item.label}</a>
+								</li>
+							))
+						}
+						<li class="theme-toggle-item">
+							<button
+								type="button"
+								class="theme-toggle theme-toggle--menu"
+								aria-label="Switch to dark theme"
+								aria-pressed="false"
+							>
+								<Icons name="moon" class="theme-icon theme-icon-moon" />
+								<Icons name="sun" class="theme-icon theme-icon-sun" />
+							</button>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</div>
+	<div class="clearfix"></div>
+</header>

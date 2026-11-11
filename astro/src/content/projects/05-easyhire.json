@@ -1,0 +1,23 @@
+{
+  "order": 5,
+  "placement": "secondary",
+  "title": "EasyHire",
+  "story": "Career-fair platform for pre-screening calls and booked meeting slots instead of walk-up queues.",
+  "stack": [
+    "React",
+    "Express",
+    "MongoDB"
+  ],
+  "links": [
+    {
+      "label": "GitHub",
+      "href": "https://github.com/kiran-1906/EasyHire",
+      "style": "ghost",
+      "rel": "noopener noreferrer"
+    }
+  ],
+  "image": {
+    "src": "/assets/images/portfolio/EasyHire.png",
+    "alt": "EasyHire career fair platform"
+  }
+}

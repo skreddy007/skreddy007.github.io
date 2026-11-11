@@ -1,0 +1,16 @@
+{
+  "order": 5,
+  "column": 2,
+  "title": "DevOps & Tools",
+  "tags": [
+    "Jenkins",
+    "Confluence",
+    "Jira",
+    "Git",
+    "GitHub",
+    "Postman",
+    "Maven",
+    "Selenium",
+    "Kubernetes"
+  ]
+}

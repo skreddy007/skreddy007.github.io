@@ -1,0 +1,26 @@
+{
+  "order": 3,
+  "placement": "featured",
+  "variant": "incident",
+  "kicker": "Featured",
+  "title": "IncidentAI",
+  "story": "VTHacks 12 project on campus emergency reporting: file an incident as text or an image, with location captured for mapping. Google Generative AI assesses type and severity, then recommends first responders and resources using NIMS resource typing. Public write-up is on Devpost; stack there is React, Node.js/Express, MongoDB Atlas, and PropelAuth for admin sign-in.",
+  "stack": [
+    "React",
+    "Node.js",
+    "MongoDB",
+    "Google AI"
+  ],
+  "links": [
+    {
+      "label": "Devpost",
+      "href": "https://devpost.com/software/incidentai",
+      "style": "primary",
+      "rel": "noopener noreferrer"
+    }
+  ],
+  "image": {
+    "src": "/assets/images/portfolio/incidentAI.png",
+    "alt": "IncidentAI dashboard and incident reporting screens"
+  }
+}

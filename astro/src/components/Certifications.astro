@@ -1,0 +1,40 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import Icons from './Icons.astro';
+
+interface Props {
+	heading: string;
+	note: string;
+	items: CollectionEntry<'certifications'>[];
+}
+
+const { heading, note, items } = Astro.props;
+---
+
+<section id="certifications" class="certifications">
+	<div class="section-heading text-center">
+		<h2>{heading}</h2>
+	</div>
+	<div class="container">
+		<div class="certifications-content">
+			<div class="row">
+				{
+					items.map((item) => (
+						<div class="col-sm-6 col-md-3">
+							<div class="cert-card">
+								<h4>{item.data.title}</h4>
+								<p>{item.data.description}</p>
+								<a href={item.data.href} target="_blank" rel={item.data.rel}>
+									{item.data.linkLabel}
+								</a>
+							</div>
+						</div>
+					))
+				}
+			</div>
+			<p class="cert-achievement">
+				<i aria-hidden="true"><Icons name="trophy" /></i> {note}
+			</p>
+		</div>
+	</div>
+</section>

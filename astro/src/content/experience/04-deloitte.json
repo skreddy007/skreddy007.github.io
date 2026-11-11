@@ -1,0 +1,13 @@
+{
+  "order": 4,
+  "dates": "February 2021 - December 2022",
+  "role": "SailPoint Developer",
+  "company": "Deloitte USI",
+  "meta": "Hyderabad, India",
+  "bullets": [
+    "Programmed custom connector setups and integrated over 150 target systems using SailPoint IIQ 8.1, writing code for REST/SOAP APIs, JDBC connections, and Active Directory modules.",
+    "Coded Java-based rule sets, step actions, and lifecycle workflows to enforce backend security policies and dynamic risk-based calculations.",
+    "Implemented custom Joiner, Mover, and Leaver application logic within identity environments to automatically revoke or grant authorization values across systems.",
+    "Built application code following Agile software practices, completing user provisioning tasks within sprint timelines to improve overall deployment efficiency by 25%."
+  ]
+}
