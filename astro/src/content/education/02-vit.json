@@ -1,0 +1,12 @@
+{
+  "order": 2,
+  "dates": "July 2016 - April 2021",
+  "degree": "Integrated Master's in Software Engineering",
+  "school": "Vellore Institute of Technology",
+  "location": "Vellore, India",
+  "details": [
+    "GPA: 8.55/10",
+    "Courses: Data Structures and Algorithms, Computer Networks, Operating Systems."
+  ],
+  "shortRule": true
+}

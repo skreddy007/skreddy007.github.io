@@ -1,0 +1,32 @@
+{
+  "order": 4,
+  "placement": "featured",
+  "variant": "flip",
+  "kicker": "Featured",
+  "title": "FinMap",
+  "story": "Virginia Tech hackathon app for financial literacy, with three Streamlit tools in one place. FinProf answers finance questions with GPT-4 and scoped prompts; FinViz charts Excel data; FinFiles uses RAG so questions stay grounded in an uploaded document. The team published a Devpost write-up and hosted the app on Streamlit Community Cloud.",
+  "stack": [
+    "Python",
+    "Streamlit",
+    "OpenAI",
+    "LangChain"
+  ],
+  "links": [
+    {
+      "label": "GitHub",
+      "href": "https://github.com/kiran-1906/VTHAX",
+      "style": "primary",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "label": "Devpost",
+      "href": "https://devpost.com/software/finmap-navigating-the-world-of-numbers",
+      "style": "ghost",
+      "rel": "noopener noreferrer"
+    }
+  ],
+  "image": {
+    "src": "/assets/images/portfolio/FinMap.webp",
+    "alt": "FinMap financial literacy app"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "order": 1,
+  "column": 1,
+  "title": "Security & IAM",
+  "tags": [
+    "Wiz",
+    "Harbor",
+    "Tenable",
+    "Nessus",
+    "Black Duck",
+    "Okta",
+    "SailPoint IIQ",
+    "IdentityNow",
+    "OAuth 2.0",
+    "OIDC",
+    "SAML"
+  ]
+}

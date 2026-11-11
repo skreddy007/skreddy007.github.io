@@ -1,0 +1,147 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import ProjectImage from './ProjectImage.astro';
+
+interface Props {
+	heading: string;
+	moreHeading: string;
+	items: CollectionEntry<'projects'>[];
+}
+
+const { heading, moreHeading, items } = Astro.props;
+const highlight = items.find((item) => item.data.placement === 'highlight');
+const featured = items.filter((item) => item.data.placement === 'featured');
+const secondary = items.filter((item) => item.data.placement === 'secondary');
+---
+
+<section id="projects" class="portfolio">
+	<div class="portfolio-details">
+		<div class="section-heading text-center">
+			<h2>{heading}</h2>
+		</div>
+		<div class="container">
+			<div class="portfolio-content">
+				{
+					highlight && (
+						<article class="security-highlight">
+							<p class="featured-kicker">{highlight.data.kicker}</p>
+							<h3>{highlight.data.title}</h3>
+							<p class="featured-story">{highlight.data.story}</p>
+							<ul>
+								{highlight.data.bullets?.map((bullet) => (
+									<li>{bullet}</li>
+								))}
+							</ul>
+							<div class="project-stack">
+								{highlight.data.stack.map((item) => (
+									<span>{item}</span>
+								))}
+							</div>
+						</article>
+					)
+				}
+				<div class="featured-projects">
+					{
+						featured.map((project) => (
+							<article class:list={['featured-project', project.data.variant && `featured-project--${project.data.variant}`]}>
+								<div class="featured-project-media">
+									{project.data.variant === 'case' ? (
+										<div class="case-art" aria-hidden="true">
+											<div class="case-art-board">
+												<span class="case-art-row" />
+												<span class="case-art-row" />
+												<span class="case-art-row" />
+											</div>
+										</div>
+									) : (
+										project.data.image && (
+											<img src={project.data.image.src} alt={project.data.image.alt} />
+										)
+									)}
+								</div>
+								<div class="featured-project-body">
+									<p class="featured-kicker">{project.data.kicker}</p>
+									<h3>{project.data.title}</h3>
+									{project.data.note && <p class="case-note">{project.data.note}</p>}
+									<p class="featured-story">{project.data.story}</p>
+									{project.data.caseStudy && (
+										<dl class="case-study">
+											{project.data.caseStudy.map((row) => (
+												<>
+													<dt>{row.label}</dt>
+													<dd>{row.body}</dd>
+												</>
+											))}
+										</dl>
+									)}
+									<div class="project-stack">
+										{project.data.stack.map((item) => (
+											<span>{item}</span>
+										))}
+									</div>
+									{project.data.links && project.data.links.length > 0 && (
+										<div class="project-links">
+											{project.data.links.map((link) => (
+												<a
+													class:list={[
+														'btn-project',
+														link.style === 'primary' ? 'btn-project-primary' : 'btn-project-ghost',
+													]}
+													href={link.href}
+													target="_blank"
+													rel={link.rel}
+												>
+													{link.label}
+												</a>
+											))}
+										</div>
+									)}
+								</div>
+							</article>
+						))
+					}
+				</div>
+				<h3 class="projects-more-heading">{moreHeading}</h3>
+				<div class="row project-secondary-grid">
+					{
+						secondary.map((project) => (
+							<div class="col-sm-6 col-md-3">
+								<div class="project-item-wrap">
+									<div class="project-media">
+										{project.data.image && <ProjectImage {...project.data.image} />}
+									</div>
+									<div class="project-caption">
+										<h4>{project.data.title}</h4>
+										<p>{project.data.story}</p>
+										<div class="project-stack">
+											{project.data.stack.map((item) => (
+												<span>{item}</span>
+											))}
+										</div>
+										{project.data.links && (
+											<div class="project-links">
+												{project.data.links.map((link) => (
+													<a
+														class:list={[
+															'btn-project',
+															link.style === 'primary' ? 'btn-project-primary' : 'btn-project-ghost',
+														]}
+														href={link.href}
+														target="_blank"
+														rel={link.rel}
+													>
+														{link.label}
+													</a>
+												))}
+											</div>
+										)}
+									</div>
+								</div>
+							</div>
+						))
+					}
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

@@ -1,0 +1,14 @@
+{
+  "order": 2,
+  "dates": "March 2025 - January 2026",
+  "role": "Jr. Full Stack Developer",
+  "company": "Mastech Digital",
+  "meta": "Client: Nutanix · Contract/Remote",
+  "bullets": [
+    "Utilized app-scanning technologies including Wiz, Black Duck, Tenable, and Harbor to support SAST, SCA, and CSPM assessments for core engineering products.",
+    "Configured web applications for secure authentication flows, integrating programmatic user provisioning features using the Okta API as the identity source.",
+    "Collaborated with product owners to define security KPIs, writing backend code to generate multi-dimensional tracking matrices that map technical metrics directly to business risks.",
+    "Partnered with Internal Audit teams to execute data control checks, programmatically exporting vulnerability history trends and structural reports required for SOC 2 and ISO compliance reviews.",
+    "Authored technical customer-facing security advisories, remediation guides, and internal knowledge base articles covering software vulnerabilities and secure coding practices."
+  ]
+}

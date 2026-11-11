@@ -1,0 +1,22 @@
+---
+import Icons from './Icons.astro';
+
+interface Props {
+	text: string;
+}
+
+const { text } = Astro.props;
+---
+
+<footer id="footer-copyright" class="footer-copyright">
+	<div class="container">
+		<div class="hm-footer-copyright text-center">
+			<p>{text}</p>
+		</div>
+	</div>
+	<div id="scroll-Top">
+		<button type="button" class="return-to-top" aria-label="Back to top">
+			<i aria-hidden="true"><Icons name="up" /></i>
+		</button>
+	</div>
+</footer>

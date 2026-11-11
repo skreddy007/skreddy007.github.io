@@ -1,0 +1,12 @@
+{
+  "order": 1,
+  "dates": "January 2023 - December 2024",
+  "degree": "Master of Engineering in Computer Science and Applications",
+  "school": "Virginia Polytechnic Institute and State University (Virginia Tech)",
+  "location": "Virginia, USA",
+  "details": [
+    "GPA: 3.83/4.0",
+    "Courses: Web Application Development, Information Security, Social Media Analytics."
+  ],
+  "shortRule": false
+}

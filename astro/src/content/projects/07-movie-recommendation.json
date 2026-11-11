@@ -1,0 +1,23 @@
+{
+  "order": 7,
+  "placement": "secondary",
+  "title": "Movie Recommendation System",
+  "story": "Notebook that predicts user preferences and suggests movies, using Python with NumPy and Pandas.",
+  "stack": [
+    "Python",
+    "NumPy",
+    "Pandas"
+  ],
+  "links": [
+    {
+      "label": "GitHub",
+      "href": "https://github.com/skreddy007/MovieRecmSys",
+      "style": "ghost",
+      "rel": "noopener noreferrer"
+    }
+  ],
+  "image": {
+    "src": "/assets/images/portfolio/MovieRec.webp",
+    "alt": "Movie recommendation notebook"
+  }
+}

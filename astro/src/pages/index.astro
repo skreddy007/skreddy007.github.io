@@ -1,0 +1,42 @@
+---
+import { getCollection, getEntry } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import Nav from '../components/Nav.astro';
+import Hero from '../components/Hero.astro';
+import About from '../components/About.astro';
+import Experience from '../components/Experience.astro';
+import Certifications from '../components/Certifications.astro';
+import Skills from '../components/Skills.astro';
+import Projects from '../components/Projects.astro';
+import Education from '../components/Education.astro';
+import Contact from '../components/Contact.astro';
+import Footer from '../components/Footer.astro';
+
+const siteEntry = await getEntry('site', 'config');
+if (!siteEntry) {
+	throw new Error('Missing site content entry: site/config');
+}
+const site = siteEntry.data;
+
+const byOrder = <T extends { data: { order: number } }>(items: T[]) =>
+	[...items].sort((a, b) => a.data.order - b.data.order);
+
+const experience = byOrder(await getCollection('experience'));
+const projects = byOrder(await getCollection('projects'));
+const certifications = byOrder(await getCollection('certifications'));
+const education = byOrder(await getCollection('education'));
+const skills = byOrder(await getCollection('skills'));
+---
+
+<Base site={site}>
+	<Nav site={site} />
+	<Hero site={site} />
+	<About site={site} />
+	<Experience heading={site.sections.experience} jobs={experience} />
+	<Certifications heading={site.sections.certifications} note={site.certificationsNote} items={certifications} />
+	<Skills heading={site.sections.skills} groups={skills} />
+	<Projects heading={site.sections.projects} moreHeading={site.sections.moreProjects} items={projects} />
+	<Education heading={site.sections.education} items={education} />
+	<Contact site={site} />
+	<Footer text={site.footer} />
+</Base>
