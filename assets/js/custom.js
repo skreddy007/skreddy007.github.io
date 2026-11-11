@@ -116,17 +116,96 @@ $(document).ready(function(){
 		
 		//=============
 
-		$('li.smooth-menu a').bind("click", function(event) {
-			event.preventDefault();
-			var anchor = $(this);
+		// Clearance between the sticky nav and a section heading.
+		var NAV_HEADING_GAP = 16;
+
+		function closedNavHeight() {
+			var $nav = $('nav.navbar.bootsnav');
+			var $menu = $('#navbar-menu');
+			// The open mobile panel stretches the fixed nav. Measure the bar only.
+			if ($menu.hasClass('in')) {
+				return $('.navbar-header').outerHeight() || 0;
+			}
+			return $nav.outerHeight() || 0;
+		}
+
+		function headingLead() {
+			var $section = $('#about');
+			var $heading = $section.children('.section-heading').first();
+			if (!$section.length || !$heading.length) {
+				return 0;
+			}
+			return Math.max(0, $heading.offset().top - $section.offset().top);
+		}
+
+		function scrollPadding() {
+			return closedNavHeight() + NAV_HEADING_GAP;
+		}
+
+		function scrollToSection(href) {
+			var $target = $(href);
+			if (!$target.length) {
+				return;
+			}
+			var $heading = $target.find('.section-heading').first();
+			var anchorTop = ($heading.length ? $heading : $target).offset().top;
+			var top = Math.max(0, Math.round(anchorTop - scrollPadding()));
+			var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 			$('html, body').stop().animate({
-				scrollTop: $(anchor.attr('href')).offset().top - 0
-			}, 1200,'easeInOutExpo');
+				scrollTop: top
+			}, reduceMotion ? 0 : 1200, 'easeInOutExpo', function () {
+				$('body').scrollspy('process');
+			});
+		}
+
+		function syncScrollspy() {
+			// Activate when the heading clears the nav. The extra pixels cover
+			// subpixel rounding so the highlighted link matches that heading.
+			var offset = Math.max(1, scrollPadding() - headingLead() + 4);
+			var $body = $('body');
+			var data = $body.data('bs.scrollspy');
+			if (!data) {
+				$body.scrollspy({
+					target: '.navbar-collapse',
+					offset: offset
+				});
+				return;
+			}
+			data.options.offset = offset;
+			$body.scrollspy('refresh');
+			$body.scrollspy('process');
+		}
+
+		$('li.smooth-menu a').on('click', function (event) {
+			event.preventDefault();
+			var href = $(this).attr('href');
+			var $menu = $('#navbar-menu');
+
+			if ($menu.hasClass('in')) {
+				var started = false;
+				function go() {
+					if (started) {
+						return;
+					}
+					started = true;
+					scrollToSection(href);
+				}
+				$('.navbar-toggle .fa').removeClass('fa-times').addClass('fa-bars');
+				$menu.one('hidden.bs.collapse', go);
+				$menu.collapse('hide');
+				window.setTimeout(go, 450);
+				return;
+			}
+
+			scrollToSection(href);
 		});
-		
-		$('body').scrollspy({
-			target:'.navbar-collapse',
-			offset:0
+
+		syncScrollspy();
+		$(window).on('load', syncScrollspy);
+		var scrollspyResizeTimer;
+		$(window).on('resize', function () {
+			window.clearTimeout(scrollspyResizeTimer);
+			scrollspyResizeTimer = window.setTimeout(syncScrollspy, 150);
 		});
 
 	// 3. Progress-bar
