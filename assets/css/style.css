@@ -1,27 +1,3 @@
-/*==================================
-* Author        : "ThemeSine"
-* Template Name :  Browny  HTML Template
-* Version       : 1.0
-==================================== */
-
-/*==================================
-font-family: 'Poppins', sans-serif;
-==================================== */
-
-
-/*=========== TABLE OF CONTENTS ===========
-1.  General css (Reset code)
-2.  Header
-3.  Welcome-hero
-4.  About me 
-5.  Education
-6.  Skill
-7.  Experience
-8.  Profiles
-9.  Portfolio
-10. Clients
-11. Contact
-
 /*-------------------------------------
 		Design tokens
 		Light values live on :root.
@@ -589,6 +565,14 @@ nav.navbar.bootsnav ul.nav > li.theme-toggle-item {
     box-shadow: var(--shadow);
     background: var(--surface);
 }
+.about-photo-frame picture,
+.project-media picture {
+    display: block;
+}
+.project-media picture {
+    width: 100%;
+    height: 100%;
+}
 .about-photo-frame img {
     display: block;
     width: 100%;
@@ -671,8 +655,10 @@ nav.navbar.bootsnav ul.nav > li.theme-toggle-item {
     padding: var(--space-4);
     height: 100%;
 }
-.single-horizontal-timeline .experience-time h3{text-transform: capitalize;}
-.single-horizontal-timeline .experience-time h3 span{text-transform:lowercase;}
+.single-horizontal-timeline .experience-time h3{
+    text-transform: none;
+    line-height: 1.45;
+}
 .single-horizontal-timeline .timeline-content h5 {margin: var(--space-2) 0;}
 .single-horizontal-timeline p {color: var(--muted);max-width: 335px;}
 
@@ -937,6 +923,34 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
 
 .portfolio-content {padding-top: var(--space-section-inner);}
 
+.security-highlight {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: var(--space-4);
+    margin-bottom: var(--space-4);
+}
+.security-highlight h3 {
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--text-heading);
+    text-transform: none;
+    margin: 0 0 var(--space-2);
+}
+.security-highlight ul {
+    margin: 0 0 var(--space-3);
+    padding-left: 18px;
+}
+.security-highlight li {
+    font-size: 15px;
+    line-height: 1.65;
+    color: var(--muted);
+    margin-bottom: var(--space-2);
+}
+.security-highlight .project-stack {
+    margin-bottom: 0;
+}
 .featured-projects {
     display: flex;
     flex-direction: column;
@@ -1251,7 +1265,7 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
 }
 .hm-footer-copyright p{
     color: var(--muted);
-    text-transform: capitalize;
+    text-transform: none;
     padding: var(--space-4) 0;
 }
 .hm-footer-copyright p a {color: var(--muted);}
@@ -1499,6 +1513,7 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
 .skill-group,
 .project-item-wrap,
 .featured-project,
+.security-highlight,
 .single-horizontal-timeline,
 .single-contact-box,
 .skill-tag,

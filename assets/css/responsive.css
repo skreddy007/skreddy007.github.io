@@ -96,6 +96,9 @@
 	.featured-project-body {padding: var(--space-3);}
 	.featured-project-body h3 {font-size: 20px;}
 	.featured-story {font-size: 14px;}
+	.security-highlight {padding: var(--space-3);}
+	.security-highlight h3 {font-size: 20px;}
+	.security-highlight li {font-size: 14px;}
 
 	.project-item-wrap {max-width: 350px;margin: 0 auto var(--space-4);}
 	.project-media {max-width: none;}
