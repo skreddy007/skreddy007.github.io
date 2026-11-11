@@ -981,6 +981,21 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
     -webkit-transform: scale(1.04);
     transform: scale(1.04);
 }
+/* IncidentAI is a wide UI screenshot. Match its frame to the source
+   ratio so cover/contain does not slice the headline or the form. */
+.featured-project--incident .featured-project-media {
+    align-self: center;
+    aspect-ratio: 2868 / 1490;
+    min-height: 0;
+}
+.featured-project--incident .featured-project-media img {
+    object-fit: contain;
+    object-position: center center;
+}
+.featured-project--incident:hover .featured-project-media img {
+    -webkit-transform: none;
+    transform: none;
+}
 .featured-project-body {
     flex: 1 1 auto;
     padding: var(--space-4);
