@@ -245,7 +245,7 @@
                               <li>Developed and maintained backend data pipelines in Python to interface with the Wiz security platform via GraphQL APIs, replacing extensive manual data compilation processes.</li>
                               <li>Programmed a backend risk-based remediation engine in Python that parses vulnerability data payloads, automatically cross-referencing CVSS scores, exploitability metrics, and business impact to prioritize high-risk assets.</li>
                               <li>Designed and implemented an automated data analytics pipeline to track vulnerability trends over time, providing leadership with enhanced visibility into system patching metrics across product lines.</li>
-                              <li>Programmed and customized Splunk dashboards to aggregate vulnerability feeds from Wiz, Black Duck, and Veracode across hybrid environments, enabling automated ingestion into SOAR playbooks and reducing manual triage by 40%.</li>
+                              <li>Built an internal Python dashboard that unifies scanner data from Wiz, Harbor, and Nessus into a single view of each product's vulnerability posture and SLA metrics.</li>
                               <li>Assisted application development teams during security incident windows by analyzing codebase exposure, validating software fixes, and tracking emergency patch status for zero-day vulnerabilities.</li>
                               <li>Led bi-weekly/monthly technical synchronization meetings with product development teams to review security backlogs, resolve code-level blockers, and ensure rapid adherence to remediation SLAs.</li>
                             </ul>
@@ -422,8 +422,6 @@
                     <span class="skill-tag">Tenable</span>
                     <span class="skill-tag">Nessus</span>
                     <span class="skill-tag">Black Duck</span>
-                    <span class="skill-tag">Veracode</span>
-                    <span class="skill-tag">Splunk</span>
                     <span class="skill-tag">Okta</span>
                     <span class="skill-tag">SailPoint IIQ</span>
                     <span class="skill-tag">IdentityNow</span>
@@ -505,15 +503,46 @@
               <ul>
                 <li>Assisted application development teams during security incident windows by analyzing codebase exposure, validating software fixes, and tracking emergency patch status for zero-day vulnerabilities.</li>
                 <li>Designed and implemented an automated data analytics pipeline to track vulnerability trends over time, providing leadership with enhanced visibility into system patching metrics across product lines.</li>
-                <li>Programmed and customized Splunk dashboards to aggregate vulnerability feeds from Wiz, Black Duck, and Veracode across hybrid environments, enabling automated ingestion into SOAR playbooks and reducing manual triage by 40%.</li>
                 <li>Utilized app-scanning technologies including Wiz, Black Duck, Tenable, and Harbor to support SAST, SCA, and CSPM assessments for core engineering products.</li>
                 <li>Authored technical customer-facing security advisories, remediation guides, and internal knowledge base articles covering software vulnerabilities and secure coding practices.</li>
               </ul>
               <div class="project-stack">
-                <span>Wiz</span><span>Harbor</span><span>Tenable</span><span>Black Duck</span><span>Veracode</span><span>Splunk</span>
+                <span>Wiz</span><span>Harbor</span><span>Tenable</span><span>Black Duck</span><span>Nessus</span>
               </div>
             </article>
             <div class="featured-projects">
+              <article class="featured-project featured-project--case">
+                <div class="featured-project-media">
+                  <div class="case-art" aria-hidden="true">
+                    <div class="case-art-board">
+                      <span class="case-art-row"></span>
+                      <span class="case-art-row"></span>
+                      <span class="case-art-row"></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="featured-project-body">
+                  <p class="featured-kicker">Internal</p>
+                  <h3>Vulnerability posture dashboard (internal, Nutanix)</h3>
+                  <p class="case-note">Internal tool, details generalized</p>
+                  <p class="featured-story">
+                    Jr. Full Stack Developer (contract) via Amiseq and Mastech Digital, client Nutanix.
+                  </p>
+                  <dl class="case-study">
+                    <dt>Problem</dt>
+                    <dd>Scanner data was scattered everywhere, and vulnerability data was tracked in weekly and monthly spreadsheets.</dd>
+                    <dt>What I built</dt>
+                    <dd>An internal dashboard that unifies scanner data from Wiz, Harbor, and Nessus into a single view. Stack: Python.</dd>
+                    <dt>What it shows</dt>
+                    <dd>Each product's current vulnerability posture, plus weekly and quarterly vulnerability-management posture per product. SLA metrics include SLA attainment, burndown ratio, and MTTR. Product teams use it to see the security posture of their own products.</dd>
+                    <dt>Outcome</dt>
+                    <dd>It replaced the weekly and monthly vulnerability spreadsheets and made it easy for product teams to look into the security side of their product.</dd>
+                  </dl>
+                  <div class="project-stack">
+                    <span>Python</span><span>Wiz</span><span>Harbor</span><span>Nessus</span><span>SLA metrics</span>
+                  </div>
+                </div>
+              </article>
               <article class="featured-project featured-project--incident">
                 <div class="featured-project-media">
                   <img src="assets/images/portfolio/incidentAI.png" alt="IncidentAI dashboard and incident reporting screens" />
@@ -534,7 +563,7 @@
                   </div>
                 </div>
               </article>
-              <article class="featured-project">
+              <article class="featured-project featured-project--flip">
                 <div class="featured-project-media">
                   <img src="assets/images/portfolio/FinMap.webp" alt="FinMap financial literacy app" />
                 </div>
